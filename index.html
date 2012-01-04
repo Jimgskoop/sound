@@ -13,24 +13,49 @@
     .keys {
       margin: 10px auto;
       overflow: hidden;
-      width: 980px;
+      width: 600px;
+      position: relative;
+    }
+
+
+    .keys .white,
+    .keys .black {
+      overflow: hidden;
     }
     
     .keys button {
+      font-size: 18px;
       background-color: #fff;
       border: 1px solid #333;
       border-radius: 0 0 5px 5px;
       float: left;
       height: 300px;
       width: 75px;
+      line-height: 30;
+      text-transform: uppercase;
+      outline: yellow;
     } 
     
+
     .keys .black {
+      left: 48px;
+      height: 200px;
+      position: absolute;
+    }
+
+    .keys .black button {
       background-color: #000;
       color: #fff;
-      height: 200px;
+      height: 100%;
+      width: 50px;
+      margin-right: 26px;
+      line-height: 19;
     }
     
+    .keys button[accesskey="g"] {
+      margin-left: 74px;
+    }
+
     .keys button:hover {
       border: 1px solid cyan;
     }
@@ -38,26 +63,46 @@
     .keys button:active {
       background-color: cyan;
       color: #000;
+      
     }
+
+    p {
+      margin-top: 80px;
+    }
+
   </style>
 </head>
 <body>
-  <h1>Sound Demo</h1>
+  <h1>&#9835; Sound Demo</h1>
   
   <div class="keys">
-    <button type="button" accesskey="z">c4</button>
-    <button class="black" type="button" accesskey="s">c4#</button>
-    <button type="button" accesskey="x">d4</button>
-    <button class="black" type="button" accesskey="d">d4#</button>
-    <button type="button" accesskey="c">e4</button>
-    <button type="button" accesskey="v">f4</button>
-    <button class="black" type="button" accesskey="g">f4#</button>
-    <button type="button" accesskey="b">g4</button>
-    <button class="black" type="button" accesskey="h">g4#</button>
-    <button type="button" accesskey="n">a4</button>
-    <button class="black" type="button" accesskey="j">a4#</button>
-    <button type="button" accesskey="m">b4</button>
-    <button type="button" accesskey=",">c5</button>
+    <div class="black">
+      <button type="button" accesskey="s">c4#</button>
+      <button type="button" accesskey="d">d4#</button>
+      <button type="button" accesskey="g">f4#</button>
+      <button type="button" accesskey="h">g4#</button>
+      <button type="button" accesskey="j">a4#</button>
+    </div>
+    <div class="white">
+      <button type="button" accesskey="Z">c4</button>
+      <button type="button" accesskey="x">d4</button>
+      <button type="button" accesskey="c">e4</button>
+      <button type="button" accesskey="v">f4</button>
+      <button type="button" accesskey="b">g4</button>
+      <button type="button" accesskey="n">a4</button>
+      <button type="button" accesskey="m">b4</button>
+      <button type="button" accesskey=",">c5</button>
+    </div>
   </div>
+
+
+<p>inspired by <a href="http://chromakode.com/misc/waves/pow.html">http://chromakode.com/misc/waves/pow.html</a></p>
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="notes.js"></script>
+  <script type="text/javascript" src="sound.js"></script>
+  <script type="text/javascript" src="sounddemo.js"></script>
+
 </body>  
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sound Demo</title>
+  <style>
+  
+    body {
+      background-color: #ccc;
+      font-family: arial;
+      text-align: center;
+    }
+    
+    .keys {
+      margin: 10px auto;
+      overflow: hidden;
+      width: 980px;
+    }
+    
+    .keys button {
+      background-color: #fff;
+      border: 1px solid #333;
+      border-radius: 0 0 5px 5px;
+      float: left;
+      height: 300px;
+      width: 75px;
+    } 
+    
+    .keys .black {
+      background-color: #000;
+      color: #fff;
+      height: 200px;
+    }
+    
+    .keys button:hover {
+      border: 1px solid cyan;
+    }
+    
+    .keys button:active {
+      background-color: cyan;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sound Demo</h1>
+  
+  <div class="keys">
+    <button type="button" accesskey="z">c4</button>
+    <button class="black" type="button" accesskey="s">c4#</button>
+    <button type="button" accesskey="x">d4</button>
+    <button class="black" type="button" accesskey="d">d4#</button>
+    <button type="button" accesskey="c">e4</button>
+    <button type="button" accesskey="v">f4</button>
+    <button class="black" type="button" accesskey="g">f4#</button>
+    <button type="button" accesskey="b">g4</button>
+    <button class="black" type="button" accesskey="h">g4#</button>
+    <button type="button" accesskey="n">a4</button>
+    <button class="black" type="button" accesskey="j">a4#</button>
+    <button type="button" accesskey="m">b4</button>
+    <button type="button" accesskey=",">c5</button>
+  </div>
+</body>  
+</html>
