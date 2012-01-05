@@ -64,7 +64,7 @@ $(document).ready(function() {
     var key = event.which,
       p = players[key];
     
-    console.log(key);
+    //console.log(key);
     
     
     if (p) {
