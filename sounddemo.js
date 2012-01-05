@@ -43,14 +43,17 @@ $(document).ready(function() {
     // 3. Dynamically create an audio element for each key	
     audioNode = new Audio(wavURI);
     $ele.data('player', audioNode);    
-    players[$ele.attr('data-yojimg-keycode')] = audioNode;
+    players[$ele.attr('data-yojimg-keycode')] = {
+      audio: audioNode,
+      node: $ele
+    };
 
   });
 
 
 
   // 4. Create delegated event listener for each button to trigger audio playback
-  $keys.on("click", "button", function(event) {
+  $keys.on("mousedown", "button", function(event) {
     event.preventDefault();
     $(this).data('player').play();
   });
@@ -58,10 +61,16 @@ $(document).ready(function() {
   $('body').on("keydown", function(event) {
     event.preventDefault();
     
-    var key = event.which;
+    var key = event.which,
+      p = players[key];
     
-    if (typeof players[key] !== "undefined") {
-      players[key].play();
+    if (p) {
+      p.audio.play();
+      simulate(p.node[0], "mouseover");
+      window.setTimeout(function() {
+        simulate(p.node[0], "mouseout");
+      }, 100);
+      
     }
     
   });
