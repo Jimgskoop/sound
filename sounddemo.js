@@ -25,7 +25,8 @@ $(document).ready(function() {
       decay = 0.25,
       sustain = 8000,
       audioNode;
-    
+
+
     // 1. Figure out the note value from each key
     note = $ele.html().toUpperCase();
     noteFreq = notes[note];
