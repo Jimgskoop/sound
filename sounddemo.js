@@ -22,7 +22,7 @@ $(document).ready(function() {
       wavData,
       wavURI,
       attack = 0.001,
-      decay = 0.25,
+      decay = 0.2,
       sustain = 8000,
       audioNode;
 
@@ -64,13 +64,15 @@ $(document).ready(function() {
     var key = event.which,
       p = players[key];
     
+    console.log(key);
+    
+    
     if (p) {
       p.audio.play();
       simulate(p.node[0], "mouseover");
       window.setTimeout(function() {
-        simulate(p.node[0], "mouseout");
-      }, 100);
-      
+       simulate(p.node[0], "mouseout");
+      }, 100);      
     }
     
   });

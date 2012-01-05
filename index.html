@@ -10,6 +10,11 @@
       text-align: center;
     }
     
+    .wrap {
+      margin: 10px auto;
+      width: 900px;
+    }
+    
     .keys {
       margin: 10px auto;
       overflow: hidden;
@@ -52,7 +57,8 @@
       line-height: 19;
     }
     
-    .keys button[accesskey="g"] {
+    .keys button[accesskey="g"],
+    .keys button[accesskey="5"] {
       margin-left: 74px;
     }
 
@@ -70,32 +76,59 @@
       margin-top: 80px;
     }
 
+
+    #oct1 {
+      margin: 10px auto 10px 0;
+    }
+
+    #oct2 {
+      margin: 10px 0 10px auto;
+    }
+
   </style>
 </head>
 <body>
   <h1>&#9835; Sound Demo</h1>
 
-  
-  <div class="keys">
-    <div class="black">
-      <button type="button" accesskey="s" data-yojimg-keycode="83">c4#</button>
-      <button type="button" accesskey="d" data-yojimg-keycode="68">d4#</button>
-      <button type="button" accesskey="g" data-yojimg-keycode="71">f4#</button>
-      <button type="button" accesskey="h" data-yojimg-keycode="72">g4#</button>
-      <button type="button" accesskey="j" data-yojimg-keycode="74">a5#</button>
+  <div class="wrap">
+    <div id="oct1" class="keys">
+      <div class="black">
+        <button type="button" accesskey="7" data-yojimg-keycode="50">c3#</button>
+        <button type="button" accesskey="6" data-yojimg-keycode="51">d3#</button>
+        <button type="button" accesskey="5" data-yojimg-keycode="53">f3#</button>
+        <button type="button" accesskey="3" data-yojimg-keycode="54">g3#</button>
+        <button type="button" accesskey="2" data-yojimg-keycode="55">a4#</button>
+      </div>
+      <div class="white">
+        <button type="button" accesskey="u" data-yojimg-keycode="81">c3</button>
+        <button type="button" accesskey="y" data-yojimg-keycode="87">d3</button>
+        <button type="button" accesskey="t" data-yojimg-keycode="69">e3</button>
+        <button type="button" accesskey="r" data-yojimg-keycode="82">f3</button>
+        <button type="button" accesskey="e" data-yojimg-keycode="84">g3</button>
+        <button type="button" accesskey="w" data-yojimg-keycode="89">a4</button>
+        <button type="button" accesskey="q" data-yojimg-keycode="85">b4</button>
+      </div>
     </div>
-    <div class="white">
-      <button type="button" accesskey="z" data-yojimg-keycode="90">c4</button>
-      <button type="button" accesskey="x" data-yojimg-keycode="88">d4</button>
-      <button type="button" accesskey="c" data-yojimg-keycode="67">e4</button>
-      <button type="button" accesskey="v" data-yojimg-keycode="86">f4</button>
-      <button type="button" accesskey="b" data-yojimg-keycode="66">g4</button>
-      <button type="button" accesskey="n" data-yojimg-keycode="78">a5</button>
-      <button type="button" accesskey="m" data-yojimg-keycode="77">b5</button>
-      <button type="button" accesskey="," data-yojimg-keycode="188">c5</button>
+    <div id="oct2" class="keys">
+      <div class="black">
+        <button type="button" accesskey="s" data-yojimg-keycode="83">c4#</button>
+        <button type="button" accesskey="d" data-yojimg-keycode="68">d4#</button>
+        <button type="button" accesskey="g" data-yojimg-keycode="71">f4#</button>
+        <button type="button" accesskey="h" data-yojimg-keycode="72">g4#</button>
+        <button type="button" accesskey="j" data-yojimg-keycode="74">a5#</button>
+      </div>
+      <div class="white">
+        <button type="button" accesskey="z" data-yojimg-keycode="90">c4</button>
+        <button type="button" accesskey="x" data-yojimg-keycode="88">d4</button>
+        <button type="button" accesskey="c" data-yojimg-keycode="67">e4</button>
+        <button type="button" accesskey="v" data-yojimg-keycode="86">f4</button>
+        <button type="button" accesskey="b" data-yojimg-keycode="66">g4</button>
+        <button type="button" accesskey="n" data-yojimg-keycode="78">a5</button>
+        <button type="button" accesskey="m" data-yojimg-keycode="77">b5</button>
+        <button type="button" accesskey="," data-yojimg-keycode="188">c5</button>      
+      </div>
     </div>
   </div>
-
 
 <p>inspired by <a href="http://chromakode.com/misc/waves/pow.html">http://chromakode.com/misc/waves/pow.html</a></p>
 
